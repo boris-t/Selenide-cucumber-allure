@@ -15,6 +15,11 @@ public class SearchGooglePage {
 
     public SearchGooglePage open() {
         ChromeDriverManager.getInstance().setup();
+
+        /*Run browser in headless mode*/
+//        Configuration.headless = true;
+
+
         Selenide.open("https://www.google.com/");
         return this;
     }
