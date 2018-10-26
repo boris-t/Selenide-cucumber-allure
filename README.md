@@ -1,4 +1,4 @@
-# Selenide-cucumber-po
+# Selenide-cucumber-allure
 
 ## Requirements:
 Java 8;
