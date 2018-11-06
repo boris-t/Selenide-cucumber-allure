@@ -14,7 +14,7 @@ public class SearchGooglePage {
     /*Opening url method*/
 
     public SearchGooglePage open() {
-        ChromeDriverManager.getInstance().setup();
+//        ChromeDriverManager.getInstance().setup();
 
         /*Run browser in headless mode*/
 //        Configuration.headless = true;
@@ -43,12 +43,5 @@ public class SearchGooglePage {
     private SelenideElement inputSearch = $("input[name='q']");
     private SelenideElement searchButton = $("input[name='btnK']");
     private ElementsCollection searchResults = $$("div[class='r'] h3");
-
-
-
-    public void clickOnElement(String element){
-        $(element).click();
-    }
-
 
 }
