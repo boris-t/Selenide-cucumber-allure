@@ -4,4 +4,4 @@ Feature: Google test
     Given Navigate to Google page
     When Enter value "Selenide"
     And Click search button
-    Then Check first link
+    Then First link have "Selenium"

@@ -28,9 +28,9 @@ public class SearchSteps {
 
         }
 
-        @Then("^Check first link$")
-        public void checkFirstLink() {
-            searchGooglePage.checkFirstResult();
+        @Then("^First link have \"([^\"]*)\"$")
+        public void checkFirstLink(String value) {
+            searchGooglePage.checkFirstResult(value);
         }
 
 }

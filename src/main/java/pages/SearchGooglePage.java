@@ -34,8 +34,8 @@ public class SearchGooglePage {
         searchButton.click();
     }
 
-    public void checkFirstResult(){
-        searchResults.get(0).shouldHave(text("Selenide: concise UI tests in Java"));
+    public void checkFirstResult(String value){
+        searchResults.get(0).shouldHave(text(value));
     }
 
 
