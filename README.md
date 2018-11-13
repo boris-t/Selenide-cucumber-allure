@@ -12,3 +12,8 @@ mvn clean test
 ## To see Allure reports:
 
 mvn allure:serve (use after mvn clean test)
+
+## Selenoid documentation
+
+https://aerokube.com/selenoid/latest/
+
