@@ -21,7 +21,7 @@ public class GoogleTestRunner {
     @BeforeClass
     public static void before() {
         Configuration.remote = "http://localhost:4444/wd/hub";
-        ChromeDriverManager.getInstance().setup();
+//        ChromeDriverManager.getInstance().setup();
         Configuration.browserSize = "1600x1024";
         Configuration.browserCapabilities.setCapability("enableVNC", true);
         if ("true".equals(System.getProperty("video.enabled"))) {
