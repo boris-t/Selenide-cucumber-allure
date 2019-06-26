@@ -3,7 +3,6 @@ package pages;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import io.github.bonigarcia.wdm.ChromeDriverManager;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -14,11 +13,6 @@ public class SearchGooglePage {
     /*Opening url method*/
 
     public SearchGooglePage open() {
-//        ChromeDriverManager.getInstance().setup();
-
-        /*Run browser in headless mode*/
-//        Configuration.headless = true;
-
 
         Selenide.open("https://www.google.com/");
         return this;
@@ -34,12 +28,12 @@ public class SearchGooglePage {
         searchButton.click();
     }
 
-    public void checkFirstResult(String value){
+    public void checkFirstResult(String value) {
         searchResults.get(0).shouldHave(text(value));
     }
 
-
     /*Locators*/
+
     private SelenideElement inputSearch = $("input[name='q']");
     private SelenideElement searchButton = $("input[name='btnK']");
     private ElementsCollection searchResults = $$("div[class='r'] h3");

@@ -20,13 +20,6 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class CucumberHooks {
 
-    @Before
-    public void beforeScenario(Scenario scenario) {
-//        ChromeDriverManager.getInstance().setup();
-//        Configuration.browserSize = "1600x1024";
-
-    }
-
     @After
     public void afterScenario(Scenario scenario) throws IOException {
         if (scenario.isFailed()) {
