@@ -3,9 +3,8 @@ package hooks;
 import com.codeborne.selenide.Screenshots;
 import com.codeborne.selenide.Selenide;
 import com.google.common.io.Files;
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import io.cucumber.java.After;
+import io.cucumber.java.Scenario;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -26,7 +25,7 @@ public class CucumberHooks {
             screenshot();
             String sessionId = getSessionId();
             System.out.println("video.enabled: " + System.getProperty("video.enabled"));
-            Selenide.close();
+            Selenide.closeWebDriver();
             if ("true".equals(System.getProperty("video.enabled"))) {
                 Selenide.sleep(5000);
                 attachAllureVideo(sessionId);
