@@ -36,6 +36,6 @@ public class SearchGooglePage {
 
     private SelenideElement inputSearch = $("input[name='q']");
     private SelenideElement searchButton = $("input[name='btnK']");
-    private ElementsCollection searchResults = $$("div[class='r'] h3");
+    private ElementsCollection searchResults = $$("div[class='g'] a h3");
 
 }

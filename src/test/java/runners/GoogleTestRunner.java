@@ -1,19 +1,18 @@
 package runners;
 
 import com.codeborne.selenide.Configuration;
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
         strict = true,
-        format = {"pretty", "json:target/cucumber.json", "html:target/cucumber.html"},
         features = {
                 "src/test/cucumber/",
         },
-        plugin = {"io.qameta.allure.cucumber2jvm.AllureCucumber2Jvm"},
+        plugin = {"io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm"},
         glue = {"steps", "hooks"})
 
 public class GoogleTestRunner {
